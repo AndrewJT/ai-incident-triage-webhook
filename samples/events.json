@@ -1,0 +1,27 @@
+[
+  {
+    "service": "orders-api",
+    "level": "ERROR",
+    "timestamp": "2026-10-09T08:14:03Z",
+    "message": "FATAL: remaining connection slots are reserved for non-replication superuser connections",
+    "stack_trace": "psycopg2.OperationalError: FATAL: remaining connection slots are reserved\n  File \"app/db.py\", line 41, in get_session\n    conn = pool.getconn()\n  File \"psycopg2/pool.py\", line 92, in getconn\n    raise PoolError('connection pool exhausted')"
+  },
+  {
+    "source": "inventory-worker",
+    "severity": "critical",
+    "ts": 1791533700,
+    "msg": "Container killed",
+    "error": "java.lang.OutOfMemoryError: Java heap space\n\tat java.base/java.util.Arrays.copyOf(Arrays.java:3512)\n\tat com.acme.inventory.BatchLoader.load(BatchLoader.java:88)"
+  },
+  {
+    "alertname": "UpstreamLatencyHigh",
+    "service": "checkout",
+    "level": "warning",
+    "message": "ReadTimeout calling pricing-service after 5000ms (attempt 3/3)"
+  },
+  {
+    "service": "frontend",
+    "level": "info",
+    "message": "Deploy 2026.10.09-3 finished successfully"
+  }
+]
